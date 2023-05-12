@@ -42,5 +42,7 @@ for row in cursor:
     cis.append(ci) 
 
 for i in range(0, 21050, 1000):
-    open('ci.song.%s.json' % i, 'w').write(json.dumps(cis[i:i+1000], indent=2, ensure_ascii=False))
+    open(f'ci.song.{i}.json', 'w').write(
+        json.dumps(cis[i : i + 1000], indent=2, ensure_ascii=False)
+    )
 
